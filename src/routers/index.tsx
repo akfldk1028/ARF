@@ -16,6 +16,7 @@ const SettingModels = lazy(() => import("@/pages/Setting/Models"));
 const SettingAPI = lazy(() => import("@/pages/Setting/API"));
 const SettingMCP = lazy(() => import("@/pages/Setting/MCP"));
 const MCPMarket = lazy(() => import("@/pages/Setting/MCPMarket"));
+const GoogleMapsDemo = lazy(() => import("@/google/GoogleMapsDemo"));
 
 // Route guard: Check if user is logged in
 const ProtectedRoute = () => {
@@ -45,6 +46,7 @@ const AppRoutes = () => (
 	<Routes>
 		<Route path="/login" element={<Login />} />
 		<Route path="/signup" element={<Signup />} />
+		<Route path="/google" element={<GoogleMapsDemo />} />
 		<Route element={<ProtectedRoute />}>
 			<Route element={<Layout />}>
 				<Route path="/" element={<Home />} />

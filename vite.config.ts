@@ -21,6 +21,7 @@ export default defineConfig(({ command, mode }) => {
       alias: {
         '@': path.join(__dirname, 'src')
       },
+      dedupe: ['react', 'react-dom'],
     },
     optimizeDeps: {
       exclude: ['@stackframe/react'],
